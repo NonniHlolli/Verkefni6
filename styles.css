@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1450px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1490px) {
+  main{
+    padding: 0;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+.text p {
+  margin-bottom: 20px;
+}
+
+.image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* grid fyrir efni, setja þarf upp í html */
+
+.grid__row {
+  display: flex;
+  flex-direction: column;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.grid__col {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.grid__row:nth-child(2){
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 1000px) {
+  .grid__col {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  .grid__row {
+    flex-direction: row;
+  }
+  .grid__row:nth-child(2){
+    flex-direction: row;
+  }
+}
+
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #aaa;
+  height: 100%;
+  max-width: 470px;
+  max-height: 300px;
+  margin-bottom: 10px;
+  padding: 16px;
+
+  overflow: scroll;
+  word-wrap: break-word;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card__content {
+    display: flex;
+}
+
+.card__content__text {
+  overflow: scroll;
+  padding-right: 10px;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.card ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+    list-style: none;
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+.card ul li {
+    margin-right: 16px;
+}
+
+@media (max-width: 700px) {
+  .card {
+    max-width: none;
+    max-height: none;
+    border: 0;
+    border-bottom: 2px solid #aaa;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .card__content {
+    flex-direction: column;
+  }
+  .card__content__text {
+    margin-bottom: 20px;
+  }
+  .card img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.cards__row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.cards__col {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (min-width: 700px) {
+  .cards__col {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards__col {
+    width: 33.3333%;
+  }
+}
